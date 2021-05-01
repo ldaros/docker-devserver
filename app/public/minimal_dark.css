@@ -1,0 +1,145 @@
+/* -------------------------------------- Body Styling ------------------------------------------ */
+* {box-sizing: border-box;}
+
+body {
+  color: #eeeeee;
+  background: #121212;
+  font-family: 'Franklin Gothic Medium';
+  min-height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+h1 {color: #f7f3f3}
+
+a:link {color: #346198}
+
+footer {
+  padding-top: 10px;
+  text-align: center;
+  color: #717171
+}
+
+/* --------------------------------------- Main Page Content ------------------------------------ */
+
+.content {
+  background: #121212d8;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ------------------------------------ Overlay Elements ---------------------------------------- */
+
+.background-image { /* Center and scale the background nicely */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(media/background_dark.jpg);
+  z-index: -1;
+  overflow: hidden;
+}
+
+#transparent {  /* transparent overlay, make it visible with js */
+  position: fixed;
+  display: none;
+  background-color: #1212125d;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ------------------------------------------ Navbar ------------------------------------------- */
+
+#navigationBar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #2E323B;
+}
+
+#navigationBar a { /* Style navbar links */
+  float: left;
+  display: block;
+  color: #eeeeee;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#navigationBar .logo {
+  position: relative;
+  max-width: 120px;
+  margin: auto;
+  top: 15px;
+  font-size: larger;
+  text-align: center;
+  font-family: "Copperplate";
+}
+
+.navigationButton { /* Position and style the nav button (top right corner) */
+  z-index: 1;
+  width: auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navigationButton:hover {background-color: #464D5F}
+
+/* ----------------------------------------- Side Bar------------------------------------------ */
+
+.sideBar {
+  height: 100%; 
+  width: 0; /* change this with JS */
+  position: fixed; 
+  background-color: #2E323B; 
+  overflow-x: hidden; 
+  transition: 0.5s;
+  top: 55px; /* distance from the top */
+  z-index: 1; 
+}
+
+.sideBar a {  /* menu links */
+  width: 100%;
+  border-bottom: 1px solid #505050;
+  white-space: nowrap;
+  padding: 14px;
+  text-decoration: none;
+  color: #eee;
+  float: left;
+  display: block;
+}
+
+.sideBar h1 { /* dividers */
+  color: #9e9e9e;
+  text-align: center;
+  padding: 0;
+  font-size: small;
+  border-top: 1px solid gray;
+  white-space: nowrap;
+}
+
+.sideBar a:hover {background-color: #464D5F}
+
+/* ------------------------------------ Adjustments for mobile ---------------------------------- */
+
+@media (max-width: 1000px) {
+  .center {width: 90%}
+
+  .search input[type=text] {width: 90%}
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* just for testing */
+/*
+div { border: 1px solid #2c62c5}
+
